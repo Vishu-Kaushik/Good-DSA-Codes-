@@ -1,0 +1,18 @@
+ __How do hash functions work?__
+1. it should map a large key to same small key that can be used 
+   as an index in the hash table
+2. Should generate values from o to m-1
+3. SHould always be fast , O(1) for integer and O(len) for string of length 'len'
+4. Should uniformly distribute large keys into hash table slots
+
+__Example of hash functions__
+1. h(large_key) = large_key % m where, m is the size of hash table
+_conditions for m_
+--> m should not a integer of power of 2 or 10
+--> it should always be a prime number
+--> also a prime number which is close to a number of power of 2 or 10 wil not be preferred
+2. for strings , weighted sum 
+ex: str[]="abcd"
+(str[0]*x^0 + str[1]*x^1 + str[2]*x^2 + str[3]*x^3 ) % m
+--> multiplying with the ascii values wala idea should be avoided as it generate same key for the permutations for a word or string
+3. Universal Hashing

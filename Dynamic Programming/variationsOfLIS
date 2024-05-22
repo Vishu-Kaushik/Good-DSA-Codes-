@@ -1,0 +1,23 @@
+Variations of the problem longest increasing subsequence
+
+1. Minimuum deletions to make an array sorted
+2. Maximum sum increasing subsequence
+3. Maximum length Bitonic subsequence --> Bitonic means (a subsequence which increases upto a point and then decreases)
+   (can be optimized using binary search based solution)
+   Idea --> We can use Dp solution and can make lis array and lds array
+   lis array --> same traversal as before
+   lds array --> (longest decreasing subsequence) we traverse from the right side of the given array and we find increasing subsquence from the right which
+   is decreasing subsequence starting with the current element till the right element
+   Then to find final ans we compute max value of lis[i] + lds[i] - 1.
+4. Building Bridges ( we are given an array of pairs and build bridges where No crossings are allowed)
+   Idea --> 1. Sort the array in increasing order of first value of pair. If two first values are same like (2,6) and (2,3) , then consider second value. 2. THen find LIS of the sorted array according to second values
+   Time complexity of the solution is O(nlogn)(sorting) + O(nlogn) (using binary search technique)
+5. The longest Chain (given array of pairs) (here in a pair -> (a,b) a < b )
+   wee need to form longest chain of pairs where two pairs (a,b) and (C,d) such that b < c
+   Idea --> 1. Sort the array of pairs according to the first value of pairs 2. Find the LIS of the sorted array
+   Time complexity is using :
+   I. Dp solution is O(n^2)
+   II. Binary search solution is O(nlogn)
+   III. same as activity selection problem in greedy algorithm which takes O(nlogn) time
+
+The solution of these problems are similar to or based on the dp based solution of lis problem

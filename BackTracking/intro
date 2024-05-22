@@ -1,0 +1,3 @@
+                What is backtracking?
+            --> Checking every possible paths for the problem and then checking that we got the solution
+            --> The path that we have seen and decided that there is no solution so we discard it and then we will never go and check it again and again
