@@ -64,13 +64,6 @@ int diameter(Node *root)
 }
 
 // Code 2:
-int diameter(Node *root)
-{
-    int diameter = 0;
-    height(root, diameter);
-    return diameter;
-}
-
 int height(Node *root, int dia)
 {
     if (root == NULL)
@@ -81,4 +74,11 @@ int height(Node *root, int dia)
     int rh = height(root->right, dia);
     dia = max(dia, 1 + lh + rh);
     return 1 + max(lh, rh);
+}
+
+int diameter(Node *root)
+{
+    int diameter = 0;
+    height(root, diameter);
+    return diameter;
 }

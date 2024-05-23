@@ -16,6 +16,7 @@ struct Node
         right = NULL;
     }
 };
+
 // Naive SOlution where the Time Complexity is O(N^2)
 int maxDepth(Node *root)
 {
